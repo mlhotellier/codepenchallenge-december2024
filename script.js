@@ -11,7 +11,6 @@ let startModal = document.getElementById("startModal");
 
 // Function to start the game
 function startGame() {
-	console.log("Start");
 	if (!gameStarted) {
 		gameStarted = true;
 		score = 0;
