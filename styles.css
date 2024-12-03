@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Syne', sans-serif;
+    background: url('https://img.freepik.com/free-vector/watercolor-sinterklaas-background_23-2149812900.jpg?t=st=1733228673~exp=1733232273~hmac=6fab56ca6003614fda61f14248067f3fe46e39ac0fbd62ceda06a8d1bda838dc&w=1480');
+    background-size: cover;
+    background-position-y: center;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: visible; /* Visible au début */
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 35px;
+    max-width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content span {
+    display: block;
+    margin-top:25px
+}
+
+.snowflake-area {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.snowflake {
+	position: absolute;
+	top: -8%;
+	font-size: 2rem;
+	animation: fall linear infinite;
+	opacity: 1;
+    padding: 4px;
+}
+
+.snowflake:hover {
+	cursor: pointer;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(0) rotate(0deg);
+	}
+	100% {
+		transform: translateY(100vh) rotate(360deg);
+	}
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+}
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 3s;
+    font-size: 1.5rem;
+}
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 6s;
+    font-size: 2.5rem;
+}
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 4s;
+}
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-duration: 7s;
+    font-size: 2rem;
+}
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-duration: 4.5s;
+    font-size: 2.2rem;
+}
+.snowflake:nth-child(7) {
+    left: 70%;
+    animation-duration: 6.5s;
+}
+.snowflake:nth-child(8) {
+    left: 80%;
+    animation-duration: 3.5s;
+    font-size: 1.8rem;
+}
+.snowflake:nth-child(9) {
+    left: 90%;
+    animation-duration: 5.5s;
+}
+.snowflake:nth-child(10) {
+    left: 95%;
+    animation-duration: 4s;
+    font-size: 2.3rem;
+}
+
+/* Ajout de styles pour les nouveaux flocons */
+.snowflake:nth-child(11) {
+    left: 15%;
+    animation-duration: 5.5s;
+    font-size: 2.1rem;
+}
+.snowflake:nth-child(12) {
+    left: 25%;
+    animation-duration: 4.2s;
+    font-size: 2.3rem;
+}
+.snowflake:nth-child(13) {
+    left: 35%;
+    animation-duration: 6.1s;
+    font-size: 2.8rem;
+}
+.snowflake:nth-child(14) {
+    left: 45%;
+    animation-duration: 5.2s;
+}
+.snowflake:nth-child(15) {
+    left: 55%;
+    animation-duration: 3.9s;
+    font-size: 2.4rem;
+}
+.snowflake:nth-child(16) {
+    left: 65%;
+    animation-duration: 6.3s;
+    font-size: 2rem;
+}
+.snowflake:nth-child(17) {
+    left: 75%;
+    animation-duration: 4.8s;
+}
+.snowflake:nth-child(18) {
+    left: 85%;
+    animation-duration: 5.1s;
+    font-size: 2.6rem;
+}
+.snowflake:nth-child(19) {
+    left: 95%;
+    animation-duration: 4.3s;
+}
+.snowflake:nth-child(20) {
+    left: 10%;
+    animation-duration: 5s;
+    font-size: 1.7rem;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 13px;
+    background-color: rgb(217, 38, 38);
+    border: 1px solid #333;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    top: 10px;
+    z-index: 1;
+}
+.button:hover {
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(217, 38, 38);
+    color: rgb(217, 38, 38);
+}
+
+.score, .timer {
+    position: absolute;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(229, 194, 16);
+    margin-left: 10px;
+}
+
+.score {
+    right: 10px;
+}
+
+.timer {
+    left: 10px;
+}
+
+.countdown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: red;
+    font-family: 'Syne', sans-serif;
+    background-color: rgba(256, 256, 256, 0.75);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 2;
+}
